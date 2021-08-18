@@ -1,10 +1,35 @@
+export interface SearchResponse {
+    tracks?: Tracks;
+}
 export interface Tracks {
-    tracks?: Track[];
+    href?:     string;
+    items?:    Track[];
+    limit?:    number;
+    next?:     string;
+    offset?:   number;
+    previous?: string;
+    total?:    number;
 }
 
+export interface PlaylistResponse {
+    collaborative?: boolean;
+    description?:   null;
+    external_urls?: ExternalUrls;
+    followers?:     Followers;
+    href?:          string;
+    id?:            string;
+    images?:        any[];
+    name?:          string;
+    owner?:         Owner;
+    public?:        boolean;
+    snapshot_id?:   string;
+    tracks?:        Tracks;
+    type?:          string;
+    uri?:           string;
+}
 export interface Track {
-    album?:             Album;
-    artists?:           Artist[];
+    album:             Album;
+    artists:           Artist[];
     available_markets?: string[];
     disc_number?:       number;
     duration_ms?:       number;
@@ -19,7 +44,7 @@ export interface Track {
     preview_url?:       string;
     track_number?:      number;
     type?:              string;
-    uri?:               string;
+    uri:               string;
 }
 
 export interface Album {
@@ -28,13 +53,13 @@ export interface Album {
     available_markets?:      string[];
     external_urls?:          ExternalUrls;
     href?:                   string;
-    id?:                     string;
-    images?:                 Image[];
-    name?:                   string;
+    id:                     string;
+    images:                 Image[];
+    name:                   string;
     release_date?:           Date;
     release_date_precision?: string;
     type?:                   string;
-    uri?:                    string;
+    uri:                    string;
 }
 
 export interface Artist {
@@ -77,4 +102,12 @@ export interface ExternalIDS {
 export interface Followers {
     href?:  null;
     total?: number;
+}
+
+export interface Owner {
+    external_urls?: ExternalUrls;
+    href?:          string;
+    id?:            string;
+    type?:          string;
+    uri?:           string;
 }
