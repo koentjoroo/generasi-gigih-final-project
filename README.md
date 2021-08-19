@@ -23,5 +23,5 @@ My final project submission for [#GenerasiGIGIH](https://sites.google.com/anakba
 
 ## Feedback
 
-If you have any feedback, you can create issue(s) [here](/issues)
+If you have any feedback, you can create issue(s) [here](https://github.com/koentjoroo/generasi-gigih-final-project/issues)
 
