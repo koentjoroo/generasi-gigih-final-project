@@ -1,9 +1,9 @@
-import { PlaylistResponse, SearchResponse, UserProfile } from '../types/spotify'
+import { AlbumsResponse, PlaylistResponse, TracksResponse, UserProfile } from '../types/spotify'
 import axios, { AxiosResponse } from 'axios'
 
-const send = axios.create({
-  baseURL: 'https://api.spotify.com/v1',
-})
+export const baseURL = 'https://api.spotify.com/v1'
+
+const client = axios.create({ baseURL })
 
 export const spotifyAuthUrl = (): string => {
   const options: string = new URLSearchParams({
@@ -20,14 +20,20 @@ export const authorize = (): void => {
 }
 
 export const getProfile = (accessToken: string): Promise<AxiosResponse<UserProfile>> => {
-  return send.get(`/me`, {
+  return client.get(`/me`, {
     headers: { Authorization: 'Bearer ' + accessToken },
   })
 }
 
-export const getTracks = (accessToken: string, params: Object): Promise<AxiosResponse<SearchResponse>> => {
-  return send.get('/search', {
+export const getTracks = (accessToken: string, params: Object): Promise<AxiosResponse<TracksResponse>> => {
+  return client.get('/search', {
     params,
+    headers: { Authorization: 'Bearer ' + accessToken },
+  })
+}
+
+export const getNewReleases = (accessToken: string): Promise<AxiosResponse<AlbumsResponse>> => {
+  return client.get('/browse/new-releases', {
     headers: { Authorization: 'Bearer ' + accessToken },
   })
 }
@@ -37,7 +43,7 @@ export const postPlaylist = (
   userID: string,
   payload: Object
 ): Promise<AxiosResponse<PlaylistResponse>> => {
-  return send.post(`/users/${userID}/playlists`, payload, {
+  return client.post(`/users/${userID}/playlists`, payload, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: 'Bearer ' + accessToken,
@@ -50,7 +56,7 @@ export const postPlaylistTracks = (
   id: string,
   payload: Object
 ): Promise<AxiosResponse<{ snapshot_id: string }>> => {
-  return send.post(`/playlists/${id}/tracks`, payload, {
+  return client.post(`/playlists/${id}/tracks`, payload, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: 'Bearer ' + accessToken,
