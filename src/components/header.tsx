@@ -10,7 +10,7 @@ const Header = () => {
   const location = useLocation()
 
   return (
-    <Grid as={'header'} templateColumns={'10vw 1fr 10vw'} gap={'1rem'} p={'1rem'}>
+    <Grid as={'header'} templateColumns={'10vw 1fr 10vw'} gap={'1rem'} p={'2rem'}>
       <Center>
         <Link fontSize="xl" fontWeight="black" href="/" _hover={{ opacity: 0.8 }}>
           GenGIGIH
