@@ -13,9 +13,7 @@ const CreatePlaylist = () => {
   return (
     <Box w={'100%'} p={'2rem'}>
       <Flex align="center" justify="space-between">
-        <Heading as="h2" size="lg">
-          Create Playlist
-        </Heading>
+        <Heading as="h1" size="lg">Create Playlist</Heading>
         <Center>
           <Button
             leftIcon={<DeleteIcon />}
