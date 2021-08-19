@@ -15,11 +15,46 @@ My final project submission for [#GenerasiGIGIH](https://sites.google.com/anakba
 
 ## Powered by
 
-- [Create React App](https://create-react-app.dev/) to initialize the project with [TypeScript](https://typescriptlang.org).
+- [Create React App](https://create-react-app.dev/) to initialize the project with [TypeScript 💎](https://typescriptlang.org).
 - [React Redux](https://react-redux.js.org/) to manage the app state.
 - [Chakra-ui ⚡](https://chakra-ui.com/docs/getting-started) + [Framer/motion](https://www.framer.com/motion/) to build the user interface.
-- [Jest](https://jestjs.io/) & [react testing-library](https://testing-library.com/) to test the UI and implementation.
+- [Jest](https://jestjs.io/) & [react testing-library](https://testing-library.com/) to test the UI and implementation. 🧪
 - Hosted on [Vercel 🚀](https://vercel.com/).
+
+## Environment Variables
+
+- `REACT_APP_URL` contains the app Base URL e.g. `https://localhost:3000/`
+- `REACT_APP_SPOTIFY_CLIENT_ID` contains Spotify Client ID
+
+## Run on Local
+
+- Clone the project
+
+  ```bash
+    git clone https://github.com/koentjoroo/generasi-gigih-final-project
+  ```
+
+- Go to the project directory
+
+  ```bash
+    cd generasi-gigih-final-project
+  ```
+
+- Install dependencies
+
+  ```bash
+    yarn
+  ```
+
+- Set up the [environment variables](#environment-variables)
+
+- Start the server
+
+  ```bash
+    yarn start
+  ```
+
+- Open http://localhost:3000 with your browser to see the result.
 
 ## Feedback
 
