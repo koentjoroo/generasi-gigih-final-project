@@ -19,7 +19,7 @@ const theme = extendTheme(
     styles: {
       global: ({ colorMode }) => ({
         html: { scrollBehavior: 'smooth' },
-        body: { bg: colorMode === 'light' ? 'white' : 'gray.900' },
+        body: { bg: colorMode === 'light' ? 'gray.50' : 'gray.900' },
       }),
     },
     radii: { '4xl': '2rem' },
