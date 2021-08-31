@@ -25,7 +25,7 @@ const Landing = () => {
 
   return (
     <Box maxW="100vw">
-      <Grid templateColumn={column} templateRow={row} gap={'1rem'}>
+      <Grid templateColumns={column} templateRows={row} gap={'1rem'}>
         <Center>
           <Image
             width={[300, 400, 500]}
