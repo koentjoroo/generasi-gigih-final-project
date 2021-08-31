@@ -10,8 +10,8 @@ const Landing = () => {
   return (
     <Box maxW="100vw">
       <Flex as={'main'} minH="100vh" p={'2rem'} direction={'column'} justify={'center'} textAlign={'center'}>
-        <Heading as={'h1'} fontSize={'6xl'}>Dengerim Musik Asique</Heading>
-        <Text my={4} color={'gray.400'}>Tau gak dengerin musik bisa bikin blablabla. Skuy bikin playlist kamu dari sini!</Text>
+        <Heading as={'h1'} fontSize={'6xl'}>Dengerim Musik Asik</Heading>
+        <Text my={4} color={'gray.400'}>Tau gak dengerin musik bisa bikin mood kamu jadi lebih baik loh! Yuks bikin playlist kamu dari sini!</Text>
         <Box>
           <Button size={'lg'} leftIcon={<FaSpotify />} onClick={authorize}>Login with Spotify</Button>
         </Box>
