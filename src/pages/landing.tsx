@@ -11,7 +11,7 @@ const Landing = () => {
   return (
     <Box maxW="100vw">
       <Flex as={'main'} minH="100vh" p={'2rem'} direction={'column'} justify={'center'} textAlign={'center'}>
-        <Image src={landingImage} alt="Listening Happy Music Animation" />
+        <Image width={[300, 400, 500]} src={landingImage} alt="Listening Happy Music Animation" />
         <Heading as={'h1'} fontSize={'6xl'}>Dengerin Musik Asik</Heading>
         <Text my={4} color={'gray.400'}>Tau gak dengerin musik bisa bikin mood kamu jadi lebih baik loh! Yuks bikin playlist kamu dari sini!</Text>
         <Box>
